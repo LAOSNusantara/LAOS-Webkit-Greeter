@@ -5,7 +5,7 @@ This is a theme for LightDM Webkit (`lightdm-webkit-greeter`).
 
 ### Screenshot
 
-![](http://laos.cs.unej.ac.id/images/lightdm.png)
+![Alt text](http://laos.cs.unej.ac.id/images/lightdm.png)
 
 ### Features
 
