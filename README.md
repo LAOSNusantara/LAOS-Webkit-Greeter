@@ -1,11 +1,11 @@
-## A Google/ChromeOS style LightDM Webkit greeter theme
+## LightDM Webkit greeter theme
 
 This is a theme for LightDM Webkit (`lightdm-webkit-greeter`).
 
 
 ### Screenshot
 
-![Alt text](http://laos.cs.unej.ac.id/images/lightdm.png)
+![Alt text](/assets/Screenshots/login.png?raw=true "Login Screen")
 
 ### Features
 
