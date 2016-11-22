@@ -7,6 +7,9 @@ This is a theme for LightDM Webkit (`lightdm-webkit-greeter`).
 
 ![Alt text](/assets/Screenshots/login.png?raw=true "Login Screen")
 
+![Alt text](/assets/Screenshots/restart.png?raw=true "Restart Screen")
+
+![Alt text](/assets/Screenshots/shutdown.png?raw=true "Shutdown Screen")
 ### Features
 
 I created this for use on Ubuntu on my Laptop, so it only has the basic features of:
