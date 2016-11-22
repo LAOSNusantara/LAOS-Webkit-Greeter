@@ -145,31 +145,22 @@
 <script type="text/javascript">
     $('.action-reboot').click(function(){
         $('.modal-header').html('RESTART');
-        $('#restart').css('display','block');
-        $('#restart-no').click(function(){
-            $('#restart').css('display','none');
-        });
-        $('#restart-yes').click(function(){
-            if ($('.modal-header').html() == 'RESTART') {
-                lightdm.restart();
-            }else{
-                lightdm.shutdown();
-            }
-        });
+        $('#restart').css('display','block'); 
     });
+
     $('.action-shutdown').click(function(){
         $('.modal-header').html('SHUTDOWN');
         $('#restart').css('display','block');
-        $('#restart-no').click(function(){
-            $('#restart').css('display','none');
-        });
-        $('#restart-yes').click(function(){
-            if ($('.modal-header').html() == 'RESTART') {
-                lightdm.restart();
-            }else{
-                lightdm.shutdown();
-            }
-        });
+    });
+    $('#restart-no').click(function(){
+        $('#restart').css('display','none');
+    });
+    $('#restart-yes').click(function(){
+        if ($('.modal-header').html() == 'RESTART') {
+            lightdm.restart();
+        }else{
+            lightdm.shutdown();
+        }
     });
 </script>
 </body>
