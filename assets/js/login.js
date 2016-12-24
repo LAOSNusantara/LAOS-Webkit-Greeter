@@ -1,3 +1,4 @@
+/* Login Card Behaviour */
 var login = (function (lightdm, $) {
     var selected_user = null;
     var password = null
@@ -101,3 +102,4 @@ var login = (function (lightdm, $) {
 } (lightdm, jQuery));
 
 login.init();
+/* End Login Card Behaviour */
