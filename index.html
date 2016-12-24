@@ -3,97 +3,6 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/css/login.css" />
-    <style type="text/css">
-
-    .tombol{
-        text-decoration: none;
-        padding: 5px;
-        color: white;
-        border: none;
-        min-width: 100px;
-    }
-    .tombol.y{
-        background-color: #e53935;
-    }
-    .tombol.n{
-        background-color: #1fa463;
-    }
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-        position: relative;
-        background-color: #fefefe;
-        margin: auto;
-        padding: 10;
-        /*border: 1px solid #888;*/
-        width: 20%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-        -webkit-animation-name: animatetop;
-        -webkit-animation-duration: 0.4s;
-        animation-name: animatetop;
-        animation-duration: 0.4s;
-        border-radius: 20px;
-    }
-
-    /* Add Animation */
-    @-webkit-keyframes animatetop {
-        from {top:-300px; opacity:0} 
-        to {top:0; opacity:1}
-    }
-
-    @keyframes animatetop {
-        from {top:-300px; opacity:0}
-        to {top:0; opacity:1}
-    }
-
-    /* The Close Button */
-    .close {
-        color: white;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .modal-header {
-        padding: 2px 16px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background-color: #b3b3b3;
-        color: #121212;
-        text-align: center;
-    }
-
-    .modal-body {
-        padding: 20px 0px 20px 0px;
-        background-color: #1a1a1a;
-    }
-
-    .modal-footer {
-        padding: 2px 16px;
-        background-color: #5cb85c;
-        color: white;
-    }
-</style>
 </head>
 <body>
     <div class="wrapper">
@@ -119,17 +28,21 @@
             <i></i> Restart
         </div>
         <div id="clock" class="action action-clock">00:00</div>
+        <div class="action action-lang">
+            en_US
+        </div>
     </div>
     <!-- The Modal -->
     <div id="restart" class="modal">
         <div class="modal-content">
+        <button id="restart-close" class="close">x</button>
         <div class="modal-header">
-        RESTART
+            RESTART
         </div>
 
         <!-- Modal content -->
         <div class="modal-body">
-            <div class="isi" align="center">
+            <div id="isiModal" class="isi" align="center">
             <button id="restart-yes" class="tombol y">Yes</button>
             <button id="restart-no" class="tombol n">No</button>    
             </div>
@@ -137,31 +50,13 @@
         </div>
     </div>
 
-</div>
+
 <script src="assets/js/mock.js"></script>
 <script src="assets/js/clock.js"></script>
+<script src="assets/js/language.js"></script>
 <script src="assets/js/jquery-2.1.0.min.js"></script>
 <script src="assets/js/login.js"></script>
-<script type="text/javascript">
-    $('.action-reboot').click(function(){
-        $('.modal-header').html('RESTART');
-        $('#restart').css('display','block'); 
-    });
-
-    $('.action-shutdown').click(function(){
-        $('.modal-header').html('SHUTDOWN');
-        $('#restart').css('display','block');
-    });
-    $('#restart-no').click(function(){
-        $('#restart').css('display','none');
-    });
-    $('#restart-yes').click(function(){
-        if ($('.modal-header').html() == 'RESTART') {
-            lightdm.restart();
-        }else{
-            lightdm.shutdown();
-        }
-    });
-</script>
+<script src="assets/js/footer.js"></script>
+    
 </body>
 </html>
